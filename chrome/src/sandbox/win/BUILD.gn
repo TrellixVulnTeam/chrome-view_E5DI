@@ -1,0 +1,42 @@
+# Copyright 2014 The Chromium Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//testing/test.gni")
+
+# This needs to be a static library rather than a sources set because small
+# portions of this are used in some contexts (like chrome_elf), and it
+# doesn't seem to dead-code strip very well. This saves 12K on chrome_elf.dll,
+# over a source set, for example.
+static_library("sandbox") {
+}
+
+test("sbox_integration_tests") {
+}
+
+executable("cfi_unittest_exe") {
+}
+
+shared_library("sbox_integration_test_hijack_dll") {
+}
+
+loadable_module("sbox_integration_test_hijack_shim_dll") {
+}
+
+loadable_module("sbox_integration_test_hooking_dll") {
+}
+
+executable("sbox_integration_test_win_proc") {
+}
+
+test("sbox_validation_tests") {
+}
+
+test("sbox_unittests") {
+}
+
+test("sandbox_poc") {
+}
+
+shared_library("pocdll") {
+}

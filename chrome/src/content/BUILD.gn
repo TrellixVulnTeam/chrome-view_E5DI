@@ -1,0 +1,12 @@
+
+import("//tools/grit/grit_rule.gni")
+import("//build/config/nacl/config.gni")
+
+
+source_set("export") {
+  # Must only be used inside of content.
+  visibility = [ "//content/*" ]
+  sources = [
+    "common/content_export.h",
+  ]
+}

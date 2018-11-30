@@ -1,0 +1,12 @@
+import("//build/buildflag_header.gni")
+import("//build/config/chromecast_build.gni")
+import("//build/config/compiler/compiler.gni")
+import("//build/config/crypto.gni")
+import("//build/config/features.gni")
+import("//build/config/ui.gni")
+
+source_set("v8") {
+}
+
+config("external_startup_data") {
+}
